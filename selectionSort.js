@@ -1,8 +1,8 @@
 
 /**
  * @description 选择排序
- * @param {String} arrStr  输入数组字符串
- * @return {String} 返回一个排序好的数组字符串
+ * @param {Array} arr  输入数组
+ * @return {Array} 返回一个排序好的数组
  */
 
 function selectionSort(arr){
