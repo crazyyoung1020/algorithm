@@ -5,8 +5,7 @@
  * @return {String} 返回一个排序好的数组字符串
  */
 
-function selectionSort(arrStr){
-    let arr = arrStr.split(',').map(Number)
+function selectionSort(arr){
     let minIndex
     for(let i=0;i<arr.length;i++){
         minIndex = i;
@@ -19,13 +18,13 @@ function selectionSort(arrStr){
             [arr[minIndex],arr[i]] = [arr[i],arr[minIndex]] // 当最小值是不循环起始值时，就交换一下起始值和最小值
         }
     }
-    return arr.join(',')
+    return arr
 }
 
 
 
 document.getElementById('button').onclick= ()=>{
     let inputVal = document.getElementById('inputVal').value
-    let result = selectionSort(inputVal)
+    let result = selectionSort(inputVal.split(',').map(Number))
     document.getElementById('resultDiv').innerText = result
 }
