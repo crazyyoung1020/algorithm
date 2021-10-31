@@ -16,7 +16,7 @@ function selectionSort(arrStr){
             }
         }
         if(minIndex !== i){
-            [arr[minIndex],arr[i]] = [arr[i],arr[minIndex]] // 当最小值是不循环起始值时，就交换一下起始值和最小值
+            [arr[minIndex],arr[i]] = [arr[i],arr[minIndex]] // 当最小值不是循环起始值时，就交换一下起始值和最小值
         }
     }
     return arr.join(',')
