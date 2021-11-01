@@ -22,7 +22,6 @@ function selectionSort(arr){
 }
 
 
-
 document.getElementById('button').onclick= ()=>{
     let inputVal = document.getElementById('inputVal').value
     let result = selectionSort(inputVal.split(',').map(Number))
