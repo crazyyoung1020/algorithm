@@ -27,7 +27,6 @@ function insertionSort(arr){
 }
 
 
-
 // 菜鸟教程给的示例
 // 该示例是待插入项，从后往前比较，找对应的位置
 // function insertionSort(arr) {
