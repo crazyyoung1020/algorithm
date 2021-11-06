@@ -41,13 +41,13 @@ let a2 = [2,3,4]
 let l1 = generatelist(a1)
 let l2 = generatelist(a2)
 // console.dir 传参depth，可以指定展开层数
-// console.log('l1')
-// console.dir(l1,{
-//     depth:100
-// })
-// console.log('l2',l2)
+console.log('l1')
+console.dir(l1,{
+    depth:100
+})
+console.log('l2',l2)
 
 let c1 = generateArray(l1)
 let c2 = generateArray(l2)
-console.log('c1',c1)
-console.log('c2',c2)
+// console.log('c1',c1)
+// console.log('c2',c2)
