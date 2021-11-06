@@ -4,7 +4,7 @@
 
 1. [x] 选择排序法(selectionSort)
 
-2. [x] 插入排序法(insertionSort)
+2. [x] 插入排序法([insertionSort](https://github.com/crazyyoung1020/algorithm/blob/main/insertionSort.js))
 
 3. [x] 冒泡排序法(bubbleSort)
  
