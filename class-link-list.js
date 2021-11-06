@@ -18,9 +18,17 @@ class ListNode {
 // 链表类
 
 class LinkedList {
-    constructor(){
-        this.head = null;
-        this.size = 0
+    constructor(arr){
+        if(arr === undefined){
+            this.head = null;
+            this.size = 0
+        }else if(Array.isArray(arr)){
+            this.head = null;
+            this.size = arr.length;
+            this.generateList(arr)
+        }else{
+            console.log('构造链表、需传入数组')
+        }
     }
     append(val){
         if(this.size == 0){
@@ -74,15 +82,33 @@ class LinkedList {
         }
         return cur
     }
+    generateList(arr){
+        // 创建第一个节点，让他成为head节点
+        let current = new ListNode(arr[0])
+        this.head = current
+        for (let i = 1; i < arr.length; i++) {
+            current.next = new ListNode(arr[i]) 
+            current  = current.next
+        }
+        // 创建一个只有指针，没有数值的假节点，
+        // let fakeHead = new ListNode()
+        // let current = fakeHead
+        // for (let i = 0; i < arr.length; i++) {
+        //     current.next = new ListNode(arr[i])
+        //     current = current.next
+        // }
+        // 让fakeHead指向真正的头节点
+        // this.head = fakeHead.next
+    }
 }
 
-let a1 = new LinkedList()
-a1.append(1)
-a1.append(2)
-a1.append(3)
-a1.append(4)
+let a1 = new LinkedList([1,2,3,4])
+// a1.append(1)
+// a1.append(2)
+// a1.append(3)
+// a1.append(4)
 a1.addNodeAt(2,5)
 a1.removeAt(4)
 console.dir(a1,{depth:10})
-let index1 = a1.indexOf(5)
-console.log('index1',index1)
+// let index1 = a1.indexOf(5)
+// console.log('index1',index1)
