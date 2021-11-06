@@ -2,7 +2,7 @@
 
   用于记录算法题的解法代码
 
-1. 选择排序法(selectionSort)
+1. [x] 选择排序法(selectionSort)
 
 2. 插入排序法(insertionSort)
 
