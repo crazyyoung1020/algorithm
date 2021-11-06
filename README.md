@@ -14,9 +14,9 @@
 
 <hr>
 
-6. 栈_有效的括号(valid-parentheses) <a target="_blank" href="https://leetcode-cn.com/problems/valid-parentheses/">leetcode地址</a>
+6. 栈_有效的括号(valid-parentheses) [leetcode地址](https://leetcode-cn.com/problems/valid-parentheses/)
 
-7. 链表_合并两个排序的链(mergeTwoLists) [leetcode地址](https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/){:target="_blank"}
+7. 链表_合并两个排序的链(mergeTwoLists) [leetcode地址](https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/)
 
 8. 二叉树_二叉树的前序遍(preorderTraversal)[leetcode地址](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)
 
