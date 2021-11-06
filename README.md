@@ -14,7 +14,7 @@
 
 <hr>
 
-6. 栈_有效的括号(valid-parentheses) <a href="https://leetcode-cn.com/problems/valid-parentheses/" target="_blank">leetcode地址</a>
+6. 栈_有效的括号(valid-parentheses) <a target="_blank" href="https://leetcode-cn.com/problems/valid-parentheses/">leetcode地址</a>
 
 7. 链表_合并两个排序的链(mergeTwoLists) [leetcode地址](https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/)
 
