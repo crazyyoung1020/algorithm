@@ -1,6 +1,8 @@
 # 算法代码仓库
 
   用于记录算法题的解法代码
+  
+### 2021.10.31-2021.11.01
 
 1. [x] 选择排序法(selectionSort)
 
@@ -14,6 +16,8 @@
 
 <hr>
 
+### 2021.11.02-2021.11.03
+
 6. [x] 栈_有效的括号(valid-parentheses) [leetcode地址](https://leetcode-cn.com/problems/valid-parentheses/)
 
 7. [ ] 链表_合并两个排序的链(mergeTwoLists) [leetcode地址](https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/)
@@ -25,6 +29,8 @@
 10. [x] 基础_回文数(palindrome-number)[leetcode地址](https://leetcode-cn.com/problems/palindrome-number/)
 
 <hr>
+
+### 2021.11.04-2021.11.05
 
 11. [ ] 反转链表(reverse-linked-list)[leetcode地址](https://leetcode-cn.com/problems/UHnkqh/)
 
@@ -38,6 +44,8 @@
 
 <hr>
 
+### 2021.11.06-2021.11.07
+
 16. [ ] 平衡二叉树 [leetcode地址](https://leetcode-cn.com/problems/balanced-binary-tree)
 
 17. [ ] 二叉树的深度 [leetcode地址](https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof)
@@ -48,6 +56,15 @@
 
 20. [ ] 反转字符串 [leetcode地址](https://leetcode-cn.com/problems/reverse-string/)
 
+<hr>
+
+### 2021.11.08-2021.11.09
+
+21. [ ] 从尾到头打印链表 [leetcode地址](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof)
+22. [ ] 返回倒数第 k 个节点 [leetcoe地址](https://leetcode-cn.com/problems/kth-node-from-end-of-list-lcci/)
+23. [ ] 环形链表 [leetcode地址](https://leetcode-cn.com/problems/linked-list-cycle/)
+24. [ ] K 个一组翻转链表 [leetcode地址](https://leetcode-cn.com/problems/reverse-nodes-in-k-group)
+25. [ ] 只出现一次的数字 [leetcode地址](https://leetcode-cn.com/problems/WGki4K)
 
 
 
