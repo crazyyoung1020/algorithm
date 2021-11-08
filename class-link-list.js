@@ -1,114 +1,151 @@
 
-// 实现一个链表类，实现增删查方法，具体有以下方法
-// append,往链表最后面添加一个节点
-// addNodeAt, 在指定位置增加链表节点
-// removeAt, 删除指定下表的链表节点
-// getNode,获取直接下标的链表节点
-// indexOf,通过链表节点的值，查找链表命中第一个节点的下标
 
-// 链表节点类
+// ListNode
 
-class ListNode {
+
+// LinkList
+
+//head
+//size
+
+// 1.数组转化成链表
+// 2.push
+// 3.remove
+// 4.replace
+// 5.indexOf
+// 6.getNode
+// 7.addNode
+
+
+class ListNode{
     constructor(val){
-        this.val = val;
-        this.next = null;
+        this.val = val
+        this.next = null
     }
 }
 
-// 链表类
-
-class LinkedList {
+class LinkList{
     constructor(arr){
-        if(arr === undefined){
-            this.head = null;
+        if( arr === undefined){
+            this.head = null
             this.size = 0
-        }else if(Array.isArray(arr)){
-            this.head = null;
-            this.size = arr.length;
+        } else if( Array.isArray(arr)){
+            this.head = null
+            this.size = arr.length
             this.generateList(arr)
-        }else{
-            console.log('构造链表、需传入数组')
         }
     }
-    append(val){
-        if(this.size == 0){
-            this.head = new ListNode(val);
-        }else{
-            let lastNode = this.getNode(this.size-1)
-            lastNode.next = new ListNode(val)
+    generateList(arr){
+        let current = new ListNode(arr[0])
+        this.head = current
+        for (let i = 1; i < arr.length; i++) {
+            current.next = new ListNode(arr[i])
+            current = current.next
         }
+    }
+    push(val){
+        // 1.找到最后一个节点
+        // 2.创建一个新节点
+        // 3.让最后一个节点的指针指向新节点
+
+        let lastNode = this.getNode( this.size -1 )
+        let node = new ListNode(val)
+        lastNode.next = node
         this.size++
-    }
-    addNodeAt(index,val){
-        if(index <0 || index > this.size ) console.log('index不在链表长度范围内')
-        if(index == 0){
-            let cur = this.head
-            this.head = new ListNode(val)
-            this.head.next = cur
-        }else{
-            let pre = this.getNode(index - 1)
-            let cur = this.getNode(index)
-            let addNode = new ListNode(val)
-            pre.next = addNode
-            addNode.next = cur
-        }
-        this.size++
-    }
-    removeAt(index){
-        if(index < 0 || index >= this.size) console.log('index不在链表长度范围内')
-        if(index == 0){
-            let next = this.getNode(index + 1)
-            this.head = next
-        }else{
-            let pre = this.getNode(index - 1)
-            let next = this.getNode(index + 1)
-            pre.next = next
-        }
-        this.size--
-    }
-    indexOf(val){
-        for (let i = 0; i < this.size; i++) {
-            let cur = this.getNode(i)
-            if(val == cur.val){
-                return i
-            }
-        }
-        console.log('未查找到对应节点')
     }
     getNode(index){
+        // 1.找到头节点
+        // 2.依次类推，找到第index个节点
+
+        if(index<0 || index>=this.size){
+            console.log('查到位置不在链表长度范围内')
+            return
+        }
         let cur = this.head
         for (let i = 0; i < index; i++) {
             cur = cur.next
         }
         return cur
     }
-    generateList(arr){
-        // 创建第一个节点，让他成为head节点
-        let current = new ListNode(arr[0])
-        this.head = current
-        for (let i = 1; i < arr.length; i++) {
-            current.next = new ListNode(arr[i]) 
-            current  = current.next
+    remove(index){
+        // 1.找到要删除元素前面的一个节点
+        // 2.把要删除元素的指针给到前面一个节点
+
+        if(index<0 || index >= this.size){
+            console.log('删除位置超过链表长度范围')
+            return 
         }
-        // 创建一个只有指针，没有数值的假节点，
-        // let fakeHead = new ListNode()
-        // let current = fakeHead
-        // for (let i = 0; i < arr.length; i++) {
-        //     current.next = new ListNode(arr[i])
-        //     current = current.next
-        // }
-        // 让fakeHead指向真正的头节点
-        // this.head = fakeHead.next
+        if(index === 0){
+            this.head = this.getNode(1)
+        }else{
+            let pre = this.getNode(index-1)
+            pre.next = this.getNode(index).next
+        }
+        this.size--
+    }
+    addNode(index, val){
+        // 1.创建一个新节点
+        // 2.找到第index个节点前面一个节点
+        // 3.将前面一个节点的指针指向新节点
+        // 4.将新节点的指针指向第index个节点
+
+        if(index<0 || index > this.size){
+            console.log('增加位置超过链表长度范围')
+            return 
+        }
+        if(index === 0){
+            let node = new ListNode(val)
+            let head = this.head
+            this.head = node
+            node.next = head
+        }else{
+            let node = new ListNode(val)
+            let pre = this.getNode(index - 1)
+            node.next = pre.next
+            pre.next = node
+        }
+        this.size++
+    }
+    replace(index, val){
+        // 1.找到第index个节点
+        // 2.将它的值替换成val
+        if(index<0 || index >= this.size){
+            console.log('查找位置超过链表长度范围')
+            return 
+        }
+        let cur = this.getNode(index)
+        cur.val = val
+    }
+    indexOf(val){
+        // 1.遍历查找链表，用val比较每一项的值，相等则return对应的下标
+
+        let cur = this.head
+        for (let i = 0; i < this.size; i++) {
+            if(cur.val === val){
+                return i
+            }
+            cur = cur.next
+        }
     }
 }
 
-let a1 = new LinkedList([1,2,3,4])
-// a1.append(1)
-// a1.append(2)
-// a1.append(3)
-// a1.append(4)
-a1.addNodeAt(2,5)
-a1.removeAt(4)
-console.dir(a1,{depth:10})
-// let index1 = a1.indexOf(5)
-// console.log('index1',index1)
+
+// 1 => 2 => newNode => 3 => 4
+
+
+let arr = [1,2,3,4]
+
+let l1 = new LinkList(arr)
+
+// let node = l1.getNode(5)
+// console.log(node)
+
+// l1.push(6)
+
+// l1.remove(0)
+// l1.addNode(2,8)
+l1.replace(0,9)
+console.log(l1.indexOf(9))
+// console.dir(l1,{
+//     depth:10
+// })
