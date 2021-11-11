@@ -50,5 +50,15 @@
 24. [ ] K 个一组翻转链表 [leetcode地址](https://leetcode-cn.com/problems/reverse-nodes-in-k-group)
 25. [ ] 只出现一次的数字 [leetcode地址](https://leetcode-cn.com/problems/WGki4K)
 
+#### 2021.11.10-2021.11.11
+
+26. [ ] 两数平方和[leetcode](https://leetcode-cn.com/problems/sum-of-square-numbers/description/)
+27. [ ] 二路归并排序[leetcode](https://leetcode-cn.com/problems/sort-an-array/)
+28. [ ] 二分查找 [leetcode](https://leetcode-cn.com/problems/binary-search)
+29. [ ] 哈希_两数之和[leetcode](https://leetcode-cn.com/problems/two-sum/)
+30. [ ] 最长递增子序列[leetcode](https://leetcode-cn.com/problems/longest-increasing-subsequence)
+
+
+
 
 
